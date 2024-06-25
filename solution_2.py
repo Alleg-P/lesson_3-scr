@@ -2,24 +2,24 @@
 
 class Greenhouse:
     def __init__(self):
-        self._temperature = 20  # начальная температура
-        self._humidity = 50     # начальная влажность
-        self._light_level = 100 # начальный уровень света
+        self.__temperature = 20  # начальная температура
+        self.__humidity = 50     # начальная влажность
+        self.__light_level = 100 # начальный уровень света
 
     @property
     def temperature(self):
-        return self._temperature
+        return self.__temperature
 
     @temperature.setter
     def temperature(self, value):
         if 15 <= value <= 30:
-            self._temperature = value
+            self.__temperature = value
         else:
             raise ValueError("Temperature must be between 15 and 30 degrees.")
 
     @property
     def humidity(self):
-        return self._humidity
+        return self.__humidity
 
     @humidity.setter
     def humidity(self, value):
@@ -30,12 +30,12 @@ class Greenhouse:
 
     @property
     def light_level(self):
-        return self._light_level
+        return self.__light_level
 
     @light_level.setter
     def light_level(self, value):
         if 0 <= value <= 100:
-            self._light_level = value
+            self.__light_level = value
         else:
             raise ValueError("Light level must be between 0 and 100 percent.")
 

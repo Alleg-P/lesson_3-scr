@@ -1,6 +1,9 @@
 # Задание 1: Управление фонтанами (Полиморфизм)
 
-class Fountain:
+from abc import ABC, abstractmethod
+
+class Fountain(ABC):
+    @abstractmethod
     def spray_water(self):
         raise NotImplementedError
 
